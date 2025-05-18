@@ -1,17 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const passwordGate = document.getElementById('password-gate');
     const passwordForm = document.getElementById('password-form');
     const passwordInput = document.getElementById('password-input');
     const passwordError = document.getElementById('password-error');
     const mainContent = document.getElementById('main-content');
 
-    // IMPORTANT: Replace 'yourChosenPassword' with the actual password you want to use.
-    // For a real site, this is not secure. GitHub Pages are public.
-    // This is a simple deterrent, not a robust security measure.
-    const correctPassword = 'beachwedding2025'; // Example password
+    // Password obfuscation functions
+    function decodePassword(encoded) {
+        // Step 1: Decode from base64
+        const base64Decoded = atob(encoded);
+
+        // Step 2: Shift characters back (simple Caesar cipher with varying shifts)
+        let decoded = '';
+        for (let i = 0; i < base64Decoded.length; i++) {
+            // Get character code and shift it back by position + 3
+            const charCode = base64Decoded.charCodeAt(i);
+            const shiftedCharCode = charCode - (i % 5 + 3);
+            decoded += String.fromCharCode(shiftedCharCode);
+        }
+
+        return decoded;
+    }
+
+    const obfuscatedPassword = 'dW13bzg1Nw==';
+
+    // Decode at runtime (never stored in plain text)
+    const correctPassword = decodePassword(obfuscatedPassword);
 
     if (passwordForm) {
-        passwordForm.addEventListener('submit', function(event) {
+        passwordForm.addEventListener('submit', function (event) {
             event.preventDefault();
             const enteredPassword = passwordInput.value;
 
