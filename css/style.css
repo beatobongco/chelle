@@ -1026,14 +1026,20 @@ section h2::after {
 }
 
 .itinerary-day.extended-day {
-    opacity: 0.4;
+    display: none;
     transform: translateY(10px);
     transition: all 0.5s ease;
 }
 
 .show-full-itinerary .itinerary-day.extended-day {
-    opacity: 1;
+    display: block;
     transform: translateY(0);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Itinerary Section - Vintage Style */
