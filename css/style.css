@@ -1225,6 +1225,31 @@ section h2::after {
     font-size: 1.1rem;
 }
 
+.important-notes {
+    background: rgba(255, 245, 235, 0.8);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--sunset-orange);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.important-notes p {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.important-notes p:last-child {
+    margin-bottom: 0;
+}
+
+.important-notes strong {
+    color: var(--sunset-orange) !important;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
 .sub-section ul {
     list-style: none;
     padding-left: 10px;
@@ -1247,23 +1272,24 @@ section h2::after {
 }
 
 .accommodation-options {
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-around;
-    margin-top: 40px;
+    justify-content: space-between;
 }
 
 .accommodation-category {
     background: linear-gradient(135deg, rgba(244, 249, 255, 0.9) 0%, rgba(229, 239, 255, 0.9) 100%);
     padding: 30px;
     border-radius: 10px;
-    flex-basis: calc(33.333% - 30px);
+    flex-basis: calc(50% - 15px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-left: 4px solid var(--cliff-purple);
     position: relative;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .accommodation-category::before {
@@ -1288,10 +1314,12 @@ section h2::after {
     color: var(--cliff-purple);
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-family: var(--font-heading);
     position: relative;
     z-index: 1;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed rgba(108, 52, 131, 0.2);
 }
 
 .accommodation-category p {
@@ -1312,9 +1340,27 @@ section h2::after {
 }
 
 .accommodation-category ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-left: 20px;
     position: relative;
+    border-bottom: 1px dotted rgba(108, 52, 131, 0.15);
+    padding-bottom: 12px;
+}
+
+.accommodation-category ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.accommodation-category ul li a {
+    color: var(--sunset-orange);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.accommodation-category ul li a:hover {
+    color: var(--cliff-purple);
+    text-decoration: underline;
 }
 
 .accommodation-category ul li::before {
@@ -1587,6 +1633,10 @@ footer p {
 
 /* Responsive Design - Vintage Style */
 @media (max-width: 992px) {
+    .accommodation-category {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
 
     /* RSVP Ticket Responsive Styles */
     .ticket-body {
@@ -1627,6 +1677,14 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .accommodation-category {
+        flex-basis: 100%;
+        padding: 25px 20px;
+    }
+    
+    .accommodation-options {
+        gap: 20px;
+    }
     body {
         font-size: 0.95rem;
     }
