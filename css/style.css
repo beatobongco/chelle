@@ -1038,8 +1038,13 @@ section h2::after {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Itinerary Section - Vintage Style */
@@ -1520,7 +1525,7 @@ section h2::after {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
+    background: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
     transform: rotate(45deg) translateY(-1em);
     transition: transform 0.4s ease-out;
 }
@@ -1569,58 +1574,54 @@ section h2::after {
     letter-spacing: 1px;
 }
 
-/* Footer - Vintage Style */
+/* Footer - Simple Elegant Style */
 footer {
     background: var(--cliff-purple);
     color: var(--text-light);
     text-align: center;
-    padding: 30px 0;
-    font-family: var(--font-body);
-    position: relative;
+    padding: 25px 0;
+    font-family: var(--font-heading);
+    border-top: 3px solid rgba(255, 123, 84, 0.5);
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" preserveAspectRatio="none"><path d="M0,12 L12,0 L24,12 Z" fill="%236C3483"/></svg>');
-    background-size: 24px 15px;
-    background-repeat: repeat-x;
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
     font-size: 1.1rem;
     letter-spacing: 1px;
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
 }
 
 /* Responsive Design - Vintage Style */
 @media (max-width: 992px) {
+
     /* RSVP Ticket Responsive Styles */
     .ticket-body {
         flex-direction: column;
     }
-    
+
     .stamp {
         margin: 0 auto 30px;
     }
-    
+
     .ticket-header h2 {
         font-size: 1.8rem;
     }
-    
+
     .ticket-content h3 {
         font-size: 1.5rem;
     }
-    
+
     .ticket-ornament {
         width: 40px;
     }
-    
+
     .ticket-header {
         padding: 20px;
     }
