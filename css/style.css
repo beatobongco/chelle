@@ -360,10 +360,11 @@ nav ul li a:hover::after {
 
 /* Scrolled Navigation State */
 nav.nav-scrolled {
-    background: rgba(44, 62, 80, 0.95);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 25px 0;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(to right, rgba(255, 123, 84, 0.5), rgba(108, 52, 131, 0.5));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav.nav-scrolled ul li a {
