@@ -32,6 +32,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+    // --- Itinerary Toggle Functionality --- //
+    const toggleOptions = document.querySelectorAll('.toggle-option');
+    const itineraryRows = document.querySelector('.itinerary-rows');
+    const coreDescription = document.querySelector('.core-description');
+    const fullDescription = document.querySelector('.full-description');
+    
+    if (toggleOptions.length && itineraryRows) {
+        toggleOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Only proceed if this option isn't already active
+                if (!option.classList.contains('toggle-active')) {
+                    // Remove active class from all options
+                    toggleOptions.forEach(opt => opt.classList.remove('toggle-active'));
+                    
+                    // Add active class to clicked option
+                    option.classList.add('toggle-active');
+                    
+                    // Toggle full/core experience
+                    const experience = option.dataset.experience;
+                    
+                    if (experience === 'full') {
+                        itineraryRows.classList.add('show-full-itinerary');
+                        coreDescription.style.display = 'none';
+                        fullDescription.style.display = 'block';
+                    } else {
+                        itineraryRows.classList.remove('show-full-itinerary');
+                        coreDescription.style.display = 'block';
+                        fullDescription.style.display = 'none';
+                    }
+                    
+                    // Add a subtle animation effect
+                    itineraryRows.style.opacity = '0.8';
+                    setTimeout(() => {
+                        itineraryRows.style.opacity = '1';
+                    }, 300);
+                }
+            });
+        });
+    }
+    
     // --- Countdown Timer --- //
     const countdownElement = document.getElementById('countdown');
     const weddingDateTimeObject = new Date('November 29, 2025 00:00:00'); // Date object for calculations

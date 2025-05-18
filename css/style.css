@@ -913,7 +913,127 @@ section h2::after {
     font-size: 1.3rem;
     line-height: 1.8;
     color: var(--text-dark);
+    text-align: left;
+}
+
+/* Itinerary Toggle - Vintage Style */
+.itinerary-toggle-container {
+    max-width: 700px;
+    margin: 0 auto 50px;
     text-align: center;
+}
+
+.itinerary-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 500px;
+    border: 1px solid rgba(255, 123, 84, 0.3);
+    overflow: hidden;
+}
+
+.itinerary-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--sunset-orange), var(--cliff-purple));
+    opacity: 0.5;
+}
+
+.toggle-option {
+    flex: 1;
+    padding: 15px 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.toggle-option::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(255, 123, 84, 0.1) 0%, rgba(108, 52, 131, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.toggle-option:hover::after {
+    opacity: 0.5;
+}
+
+.toggle-option.toggle-active {
+    background: linear-gradient(135deg, rgba(255, 123, 84, 0.2) 0%, rgba(108, 52, 131, 0.2) 100%);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-option.toggle-active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    background: var(--sunset-orange);
+    border-radius: 3px 3px 0 0;
+}
+
+.toggle-title {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--cliff-purple);
+}
+
+.toggle-dates {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.toggle-description {
+    margin-top: 15px;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Itinerary Days Section - Vintage Style */
+.itinerary-rows {
+    position: relative;
+    padding-left: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.itinerary-day.extended-day {
+    opacity: 0.4;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.show-full-itinerary .itinerary-day.extended-day {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Itinerary Section - Vintage Style */
