@@ -1321,12 +1321,10 @@ section h2::after {
     font-size: 1.2rem;
 }
 
-/* RSVP Section - Vintage Style */
+/* RSVP Section - Vintage Travel Ticket Style */
 #rsvp {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30,10 L50,30 L30,50 L10,30 L30,10 Z" fill="%23FF7B5422" stroke="%23FF7B5411" stroke-width="1"/></svg>');
-    background-size: 60px 60px;
-    text-align: center;
-    padding-bottom: 150px;
+    background-color: #fdfaf5;
+    padding: 80px 0 150px;
     position: relative;
 }
 
@@ -1348,24 +1346,227 @@ section h2::after {
     z-index: 2;
 }
 
-#rsvp h2 {
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    color: var(--cliff-purple);
+.rsvp-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    perspective: 1000px;
 }
 
-#rsvp p {
+.rsvp-ticket {
+    background: linear-gradient(135deg, #fff8eb 0%, #fff4e0 100%);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(108, 52, 131, 0.2), 0 0 0 1px rgba(255, 123, 84, 0.1);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(2deg) rotateY(-1deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid rgba(108, 52, 131, 0.1);
+}
+
+.rsvp-ticket::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed rgba(255, 123, 84, 0.2);
+    pointer-events: none;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.rsvp-ticket:hover {
+    transform: rotateX(0deg) rotateY(0deg) translateY(-10px);
+    box-shadow: 0 30px 70px rgba(108, 52, 131, 0.3), 0 0 0 1px rgba(255, 123, 84, 0.2);
+}
+
+.ticket-header {
+    background: var(--cliff-purple);
+    padding: 25px 40px;
+    position: relative;
+    text-align: center;
+    border-bottom: 3px double rgba(255, 255, 255, 0.2);
+}
+
+.ticket-header h2 {
+    font-family: var(--font-heading);
+    color: #fff;
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ticket-ornament {
+    display: none;
+}
+
+.ticket-body {
+    padding: 40px;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+.stamp {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+    background: var(--sunset-orange);
+    transform: rotate(-5deg);
+    margin-right: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamp::before {
+    content: '';
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    position: absolute;
+}
+
+.stamp::after {
+    content: 'KRABI';
+    font-family: var(--font-heading);
     font-size: 1.4rem;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: var(--text-dark);
-    line-height: 1.6;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-#rsvp .btn {
-    margin-top: 20px;
-    padding: 18px 40px;
+.stamp span {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: var(--cliff-purple);
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.ticket-content h3 {
+    font-family: var(--font-heading);
+    color: var(--cliff-purple);
+    font-size: 1.8rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px dashed rgba(108, 52, 131, 0.2);
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.ticket-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.ticket-details {
+    font-family: var(--font-heading);
+    font-size: 1.3rem !important;
+    color: var(--sunset-orange) !important;
+    letter-spacing: 1px;
+}
+
+.rsvp-options {
+    margin: 30px 0;
+}
+
+.btn-rsvp {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--sunset-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: var(--font-heading);
     font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 123, 84, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-rsvp::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.1), rgba(255,255,255,0) 80%);
+    transform: rotate(45deg) translateY(-1em);
+    transition: transform 0.4s ease-out;
+}
+
+.btn-rsvp:hover {
+    background: var(--cliff-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(108, 52, 131, 0.4);
+}
+
+.btn-rsvp:hover::after {
+    transform: rotate(45deg) translateY(28em);
+}
+
+.btn-text {
+    margin-right: 15px;
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.rsvp-note {
+    font-style: italic;
+    font-size: 1rem !important;
+    opacity: 0.8;
+}
+
+.ticket-footer {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(108, 52, 131, 0.05);
+    border-top: 1px dashed rgba(108, 52, 131, 0.2);
+}
+
+.ticket-tear {
+    display: none;
+}
+
+.ticket-footer p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--cliff-purple);
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 /* Footer - Vintage Style */
@@ -1399,6 +1600,31 @@ footer p {
 
 /* Responsive Design - Vintage Style */
 @media (max-width: 992px) {
+    /* RSVP Ticket Responsive Styles */
+    .ticket-body {
+        flex-direction: column;
+    }
+    
+    .stamp {
+        margin: 0 auto 30px;
+    }
+    
+    .ticket-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .ticket-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .ticket-ornament {
+        width: 40px;
+    }
+    
+    .ticket-header {
+        padding: 20px;
+    }
+
     .itinerary-day {
         max-width: 90%;
     }
