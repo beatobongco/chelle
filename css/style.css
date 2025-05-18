@@ -24,6 +24,7 @@
     /* Fonts */
     --font-display: 'Bigilla', serif;
     --font-heading: 'Kiona', sans-serif;
+    --font-handwriting: 'Petit Formal Script', cursive;
     --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -38,6 +39,14 @@
 @font-face {
     font-family: 'Kiona';
     src: url('../fonts/Kiona-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antonio Fischer';
+    src: url('../fonts/Antonio Fischer.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -706,55 +715,205 @@ section h2::after {
 }
 
 /* Our Story Section - Vintage Style */
-#our-story .content {
+#our-story {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f5ebd8" opacity="0.2"/><path d="M0,0 L10,10 M20,0 L30,10 M40,0 L50,10 M60,0 L70,10 M80,0 L90,10" stroke="%23FF7B54" stroke-width="0.5" opacity="0.2"/></svg>');
+}
+
+.beach-decorations {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 120px;
+    height: 120px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 C70,30 90,30 90,50 C90,70 70,90 50,90 C30,90 10,70 10,50 C10,30 30,10 50,10 Z" fill="none" stroke="%23FF7B54" stroke-width="1" opacity="0.4"/><path d="M30,30 Q50,10 70,30 Q90,50 70,70 Q50,90 30,70 Q10,50 30,30 Z" fill="none" stroke="%236C3483" stroke-width="1" opacity="0.3"/></svg>');
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.letter-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 60px;
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-#our-story .content::before {
+.letter-container::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    border: 2px dashed var(--sunset-orange);
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid var(--sunset-orange);
     opacity: 0.3;
-    border-radius: 10px;
+    border-radius: 7px;
     z-index: 0;
     pointer-events: none;
 }
 
-#our-story img {
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    margin: 0 auto 20px auto;
-    transform: rotate(-3deg);
-    border: 10px solid white;
+/* Enhanced Photo Frame */
+.photo-frame {
     position: relative;
+    max-width: 400px;
     z-index: 1;
-    transition: all 0.5s ease;
 }
 
-#our-story img:hover {
+.photo-frame img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg);
+    border: 15px solid white;
+    background: linear-gradient(135deg, #fff 0%, #f8f5e9 100%);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.photo-frame::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(108, 52, 131, 0.2);
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.photo-frame img:hover {
     transform: rotate(0deg) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-#our-story p {
-    font-size: 1.2rem;
-    line-height: 1.8;
+.photo-caption {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    background: var(--sunset-orange);
+    color: white;
+    padding: 5px 15px;
+    font-family: var(--font-handwriting);
+    font-size: 0.9rem;
+    transform: rotate(-2deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+/* Letter Content Styles */
+.letter-content {
+    flex: 1;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.letter-greeting {
+    font-family: var(--font-handwriting);
+    font-size: 2.5rem;
+    color: var(--cliff-purple);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.letter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.letter-text {
+    font-family: var(--font-handwriting);
+    font-size: 1.8rem;
+    color: var(--cliff-purple);
+    line-height: 1.6;
+    margin: 10px 0;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letter-message {
+    font-size: 1.3rem;
+    line-height: 1.8;
     color: var(--text-dark);
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+    font-family: var(--font-body);
+}
+
+.letter-signature {
+    font-family: var(--font-handwriting);
+    font-size: 1.8rem;
+    color: var(--cliff-purple);
+    line-height: 1.4;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 40px;
+}
+
+/* Quote Block - Large Version */
+.story-quote-large {
+    font-family: var(--font-handwriting);
+    font-size: 2.8rem;
+    color: var(--cliff-purple);
+    line-height: 1.5;
+    margin: 20px 0 50px;
+    padding: 0 30px;
+    position: relative;
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story-quote-large::before,
+.story-quote-large::after {
+    content: '"';
+    font-family: serif;
+    font-size: 4rem;
+    color: var(--sunset-orange);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.story-quote-large::before {
+    left: 0;
+    top: -20px;
+}
+
+.story-quote-large::after {
+    right: 0;
+    bottom: -40px;
+}
+
+/* Story Message */
+.story-message {
+    background: linear-gradient(135deg, rgba(255, 123, 84, 0.1) 0%, rgba(108, 52, 131, 0.1) 100%);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative;
+    border-left: 4px solid var(--sunset-orange);
+}
+
+.story-message p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: center;
 }
 
 /* Itinerary Section - Vintage Style */
