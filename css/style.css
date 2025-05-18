@@ -1674,6 +1674,30 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .letter-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 25px;
+    }
+    
+    .photo-frame {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .letter-content {
+        width: 100%;
+    }
+    
+    .letter-body {
+        padding: 20px 15px;
+    }
+    
+    .letter-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
     .accommodation-category {
         flex-basis: 100%;
         padding: 25px 20px;
@@ -1791,7 +1815,8 @@ footer p {
     }
 
     #our-story img {
-        max-width: 320px;
+        max-width: 100%;
+        height: auto;
     }
 
     .itinerary-rows::before {
@@ -1829,6 +1854,28 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    .letter-container {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+    
+    .photo-frame {
+        max-width: 250px;
+    }
+    
+    .letter-text {
+        font-size: 0.95rem;
+    }
+    
+    .letter-signature {
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+    
+    .photo-caption {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
     #home {
         padding-top: 100px;
     }
