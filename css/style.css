@@ -1096,17 +1096,22 @@ section h2::after {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.8);
 }
 
-.itinerary-day:nth-child(even)::before {
+.itinerary-day:nth-child(even)::before,
+.day-3-full::before {
     left: auto;
     right: -45px;
 }
 
-.itinerary-day:nth-child(even) {
+.itinerary-day:nth-child(even),
+.day-3-full {
     margin-left: 40px;
+    margin-right: auto;
 }
 
-.itinerary-day:nth-child(odd) {
+.itinerary-day:nth-child(odd),
+.day-3-core {
     margin-right: 40px;
+    margin-left: auto;
 }
 
 .itinerary-day h3 {
@@ -1139,13 +1144,14 @@ section h2::after {
 }
 
 .itinerary-day ul li::before {
-    content: '\2713';
-    color: var(--sunset-orange);
+    content: '';
     position: absolute;
-    left: 0;
-    top: 2px;
-    font-size: 1.4rem;
-    font-weight: bold;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sunset-orange);
+    left: 10px;
+    top: 10px;
 }
 
 .itinerary-day ul li .time {

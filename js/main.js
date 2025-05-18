@@ -52,15 +52,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Toggle full/core experience
                     const experience = option.dataset.experience;
+                    const day3Core = document.querySelector('.day-3-core');
+                    const day3Full = document.querySelector('.day-3-full');
                     
                     if (experience === 'full') {
                         itineraryRows.classList.add('show-full-itinerary');
                         coreDescription.style.display = 'none';
                         fullDescription.style.display = 'block';
+                        
+                        // Switch Day 3 content
+                        if (day3Core && day3Full) {
+                            day3Core.style.display = 'none';
+                            day3Full.style.display = 'block';
+                        }
                     } else {
                         itineraryRows.classList.remove('show-full-itinerary');
                         coreDescription.style.display = 'block';
                         fullDescription.style.display = 'none';
+                        
+                        // Switch Day 3 content
+                        if (day3Core && day3Full) {
+                            day3Core.style.display = 'block';
+                            day3Full.style.display = 'none';
+                        }
                     }
                     
                     // Add a subtle animation effect
