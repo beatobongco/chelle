@@ -1,18 +1,20 @@
 :root {
-    --tropical-pink: #D85076;
-    --olive-green: #A5AB84;
-    --sunset-orange: #F47A3A;
-    --light-lavender: #D7C8EA;
-    --pale-yellow: #FDEFB2;
-    --dark-brown-text: #4E4035;
-    --site-white: #FFFFFF;
-
+    /* Ton Sai Beach poster-inspired color palette */
+    --sunset-orange: #FF7B54; /* Vibrant sunset orange */
+    --sunset-yellow: #FFB26B; /* Warm sunset yellow */
+    --cliff-purple: #6C3483; /* Deep purple cliffs */
+    --cliff-lavender: #9B59B6; /* Lighter purple cliff details */
+    --ocean-blue: #3498DB; /* Ocean blue */
+    --beach-sand: #F5EBD8; /* Warm sand color */
+    --palm-green: #27AE60; /* Palm tree green */
+    --text-dark: #2C3E50; /* Dark text color */
+    --text-light: #ECF0F1; /* Light text color */
+    --overlay-dark: rgba(44, 62, 80, 0.7); /* Dark overlay */
+    
+    /* Fonts */
     --font-display: 'Bigilla', serif;
     --font-heading: 'Kiona', sans-serif;
     --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-    --current-bigilla: 'Bigilla', serif;
-    --current-kiona: 'Kiona', sans-serif;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
     src: url('../fonts/Bigilla.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -27,107 +30,198 @@
     src: url('../fonts/Kiona-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 /* General Styles */
-body {
-    font-family: var(--font-body);
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--dark-brown-text);
-    line-height: 1.6;
-    background-color: var(--pale-yellow);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    background-color: var(--beach-sand);
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, var(--beach-sand), #FFF8E1);
 }
 
 .hidden-content {
     display: none;
 }
 
+/* Password Gate with vintage poster aesthetic */
 #password-gate {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--cliff-purple) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    color: white;
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+#password-gate h2 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--text-light);
+}
+
+#password-gate form {
+    background: rgba(255,255,255,0.15);
+    padding: 3rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
 }
 
 #password-gate input {
-    padding: 10px;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: var(--font-body);
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#password-gate input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+#password-gate input:focus {
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
 #password-gate button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 15px 30px;
+    background: var(--sunset-yellow);
+    color: var(--text-dark);
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    font-family: var(--font-body);
-}
-
-#password-gate button:hover {
-    background-color: #45a049;
-}
-
-#password-error {
-    color: red;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     margin-top: 10px;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
+#password-gate button:hover {
+    background: var(--sunset-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-h1,
-h2,
-h3 {
-    color: var(--dark-brown-text);
-    margin-bottom: 0.7em;
+#password-error {
+    color: #FFD2D2;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Typography with vintage poster aesthetics */
+h1, h2, h3, h4 {
+    margin-bottom: 1em;
     font-family: var(--font-heading);
+    letter-spacing: 1px;
 }
 
 h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 4.5rem;
     font-weight: normal;
-    color: #482041;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    color: var(--text-light);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     font-family: var(--font-display);
+    letter-spacing: 4px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--cliff-purple);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: normal;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--sunset-orange);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--sunset-orange);
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: var(--cliff-purple);
+    margin-bottom: 15px;
 }
 
 p {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 a {
-    color: var(--sunset-orange);
+    color: var(--cliff-purple);
     text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--sunset-orange);
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* Utilities */
@@ -139,16 +233,34 @@ img {
     width: 100%;
 }
 
-/* Navigation Bar */
+/* Vintage design elements */
+.vintage-border {
+    position: relative;
+}
+
+.vintage-border::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--sunset-orange);
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navigation Bar - Vintage Style */
 nav {
     background: transparent;
-    color: var(--site-white);
-    padding: 15px 0;
+    color: var(--text-light);
+    padding: 25px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 nav .container {
@@ -163,41 +275,68 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 40px;
 }
 
 nav ul li {
-    margin-left: 20px;
+    position: relative;
 }
 
 nav ul li a {
-    color: var(--site-white);
+    color: var(--text-light);
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: var(--font-heading);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--sunset-yellow);
+    transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--pale-yellow);
+    color: var(--sunset-yellow);
     text-decoration: none;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Scrolled Navigation State */
 nav.nav-scrolled {
-    background: rgba(253, 239, 178, 0.95);
-    box-shadow: 0 2px 5px rgba(78, 64, 53, 0.15);
+    background: rgba(44, 62, 80, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
 }
 
 nav.nav-scrolled ul li a {
-    color: var(--olive-green);
+    color: var(--text-light);
     text-shadow: none;
-    font-family: var(--font-heading);
 }
 
 nav.nav-scrolled ul li a:hover {
-    color: var(--sunset-orange);
+    color: var(--sunset-yellow);
 }
 
-/* Hero Section */
+nav.nav-scrolled ul li a::after {
+    background-color: var(--sunset-yellow);
+}
+
+/* Hero Section - Vintage Poster Style */
 #home {
     background: url('../images/hero-banner.jpg') no-repeat center center/cover;
     min-height: 100vh;
@@ -206,110 +345,361 @@ nav.nav-scrolled ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--site-white);
+    color: var(--text-light);
     padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.5), rgba(108, 52, 131, 0.7));
+    z-index: 1;
+}
+
+#home::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, var(--beach-sand), transparent);
+    z-index: 2;
+    opacity: 0.7;
+}
+
+#home > * {
+    position: relative;
+    z-index: 3;
 }
 
 #home p {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: var(--font-heading);
-    color: var(--site-white);
+    color: var(--text-light);
 }
 
 #home p.hero-location {
-    font-size: 1.8rem;
-    margin-top: 0.5rem;
+    font-size: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--site-white);
+    color: var(--sunset-yellow);
     font-family: var(--font-heading);
     font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#home p.hero-location::before,
+#home p.hero-location::after {
+    content: '⋆';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--sunset-orange);
+    font-size: 1.8rem;
+}
+
+#home p.hero-location::before {
+    left: -10px;
+}
+
+#home p.hero-location::after {
+    right: -10px;
 }
 
 #home p.hero-date {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: var(--site-white);
-    font-family: var(--font-body);
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+#home p.hero-date::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--sunset-orange);
 }
 
 #countdown {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-    color: var(--site-white);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2.5rem;
+    color: var(--text-light);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     font-family: var(--font-heading);
+    letter-spacing: 2px;
+    background: rgba(255, 123, 84, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: inline-block;
 }
 
 .btn {
     display: inline-block;
     background: var(--sunset-orange);
-    color: var(--site-white);
-    padding: 12px 25px;
+    color: var(--text-light);
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 1.1rem;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
     border: none;
     cursor: pointer;
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 6px 30px rgba(255, 123, 84, 0.4);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--cliff-purple);
+    transition: all 0.4s ease;
+    z-index: -1;
 }
 
 .btn:hover {
-    background: var(--tropical-pink);
-    color: var(--site-white);
+    color: var(--text-light);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 123, 84, 0.6);
 }
 
-/* Sections */
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn-large {
+    padding: 18px 36px;
+    font-size: 1.3rem;
+}
+
+/* Sections - Vintage Style */
 section {
-    padding: 100px 0;
-    border-bottom: 1px solid #eee;
+    padding: 120px 0;
+    position: relative;
 }
 
-section:last-of-type {
-    border-bottom: none;
+section:nth-child(odd) {
+    background-color: rgba(245, 235, 216, 0.5);
+}
+
+section:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 L50 0 L100 10 Z" fill="%23F5EBD8" /></svg>');
+    background-size: 100px 15px;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 10 L50 0 L100 10 Z" fill="%23F5EBD8" /></svg>');
+    background-size: 100px 15px;
+    background-repeat: repeat-x;
+    z-index: 2;
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 60px;
-    font-size: 2.8rem;
-    color: var(--olive-green);
-    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    color: var(--cliff-purple);
+    font-family: var(--font-display);
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-/* Our Story Section */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: var(--sunset-orange);
+}
+
+/* Our Story Section - Vintage Style */
 #our-story .content {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#our-story .content::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px dashed var(--sunset-orange);
+    opacity: 0.3;
+    border-radius: 10px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 #our-story img {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     margin: 0 auto 20px auto;
+    transform: rotate(-3deg);
+    border: 10px solid white;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
 }
 
-/* Itinerary Section */
-.itinerary-day {
-    background: var(--site-white);
-    padding: 25px;
+#our-story img:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#our-story p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    color: var(--text-dark);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(78, 64, 53, 0.1);
-    margin-bottom: 30px;
+}
+
+/* Itinerary Section - Vintage Style */
+.itinerary-rows {
+    position: relative;
+}
+
+.itinerary-rows::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--sunset-orange),
+        var(--sunset-orange) 10px,
+        var(--sunset-yellow) 10px,
+        var(--sunset-yellow) 20px
+    );
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.itinerary-day {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(155, 89, 182, 0.1);
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.itinerary-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.itinerary-day::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--cliff-purple);
+    top: 30px;
+    left: -45px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.itinerary-day:nth-child(even)::before {
+    left: auto;
+    right: -45px;
+}
+
+.itinerary-day:nth-child(even) {
+    margin-left: 40px;
+}
+
+.itinerary-day:nth-child(odd) {
+    margin-right: 40px;
 }
 
 .itinerary-day h3 {
-    color: var(--olive-green);
+    color: var(--cliff-purple);
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-size: 2rem;
     font-family: var(--font-heading);
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed rgba(108, 52, 131, 0.2);
 }
 
 .itinerary-day ul {
@@ -318,84 +708,293 @@ section h2 {
 }
 
 .itinerary-day ul li {
-    margin-bottom: 12px;
-    padding-left: 25px;
+    margin-bottom: 20px;
+    padding-left: 35px;
     position: relative;
     display: flex;
     align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.itinerary-day ul li:hover {
+    transform: translateX(5px);
 }
 
 .itinerary-day ul li::before {
     content: '\2713';
-    color: var(--olive-green);
+    color: var(--sunset-orange);
     position: absolute;
     left: 0;
     top: 2px;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .itinerary-day ul li .time {
     font-weight: bold;
-    color: var(--dark-brown-text);
-    min-width: 80px;
+    color: var(--cliff-purple);
+    min-width: 100px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 20px;
     font-family: var(--font-heading);
+    padding: 5px 10px;
+    background: rgba(108, 52, 131, 0.1);
+    border-radius: 5px;
+    text-align: center;
 }
 
 .itinerary-day ul li .event {
     flex-grow: 1;
     font-family: var(--font-body);
-    color: var(--dark-brown-text);
+    color: var(--text-dark);
+    font-size: 1.1rem;
 }
 
-/* Travel & Accommodation Section */
+/* Travel & Accommodation Section - Vintage Style */
+#travel {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M25,50 C25,25 75,25 75,50 C75,75 25,75 25,50 Z" fill="none" stroke="%23FF7B5433" stroke-width="1"/></svg>'), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="none" stroke="%236C348333" stroke-width="1"/></svg>');
+    background-position: 0 0, 0 0;
+    background-size: 100px 100px, 40px 40px;
+}
+
+.sub-section {
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border-top: 5px solid var(--sunset-orange);
+}
+
 .sub-section h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: var(--olive-green);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: var(--cliff-purple);
     font-family: var(--font-heading);
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.sub-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: var(--sunset-orange);
+    border-radius: 3px;
+}
+
+.sub-section p strong {
+    color: var(--cliff-purple);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sub-section ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.sub-section ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.sub-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--sunset-orange);
+    font-weight: bold;
 }
 
 .accommodation-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-around;
+    margin-top: 40px;
 }
 
 .accommodation-category {
-    background: rgba(165, 171, 132, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    flex-basis: calc(33.333% - 20px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, rgba(244, 249, 255, 0.9) 0%, rgba(229, 239, 255, 0.9) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: calc(33.333% - 30px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--cliff-purple);
+    position: relative;
+    overflow: hidden;
+}
+
+.accommodation-category::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 150px;
+    height: 150px;
+    background: var(--sunset-orange);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.accommodation-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .accommodation-category h4 {
-    color: var(--olive-green);
+    color: var(--cliff-purple);
     margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
     font-family: var(--font-heading);
+    position: relative;
+    z-index: 1;
 }
 
-/* RSVP Section */
+.accommodation-category p {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.accommodation-category ul {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.accommodation-category ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.accommodation-category ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--sunset-orange);
+    font-size: 1.2rem;
+}
+
+/* RSVP Section - Vintage Style */
 #rsvp {
-    background-color: rgba(165, 171, 132, 0.2);
-}
-
-/* Footer */
-footer {
-    background: var(--dark-brown-text);
-    color: var(--pale-yellow);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30,10 L50,30 L30,50 L10,30 L30,10 Z" fill="%23FF7B5422" stroke="%23FF7B5411" stroke-width="1"/></svg>');
+    background-size: 60px 60px;
     text-align: center;
-    padding: 20px 0;
-    font-family: var(--font-body);
+    padding-bottom: 150px;
+    position: relative;
 }
 
-/* Responsive Design */
+#rsvp::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23F5EBD8"/></svg>');
+    background-size: cover;
+    background-position: center bottom;
+    z-index: 1;
+}
+
+#rsvp .container {
+    position: relative;
+    z-index: 2;
+}
+
+#rsvp h2 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: var(--cliff-purple);
+}
+
+#rsvp p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+#rsvp .btn {
+    margin-top: 20px;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+}
+
+/* Footer - Vintage Style */
+footer {
+    background: var(--cliff-purple);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+    font-family: var(--font-body);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" preserveAspectRatio="none"><path d="M0,12 L12,0 L24,12 Z" fill="%236C3483"/></svg>');
+    background-size: 24px 15px;
+    background-repeat: repeat-x;
+}
+
+footer p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design - Vintage Style */
+@media (max-width: 992px) {
+    .itinerary-day {
+        max-width: 90%;
+    }
+    
+    #our-story .content {
+        gap: 40px;
+    }
+    
+    .accommodation-category {
+        flex-basis: calc(50% - 30px);
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+    
     nav {
-        display: none;
+        padding: 15px 0;
     }
 
     nav .container {
@@ -404,18 +1003,15 @@ footer {
     }
 
     nav ul {
-        margin-top: 10px;
+        margin-top: 15px;
         flex-direction: column;
         align-items: center;
         width: 100%;
-    }
-
-    nav ul li {
-        margin: 8px 0;
+        gap: 20px;
     }
 
     #home h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     #home p.hero-location {
@@ -428,6 +1024,12 @@ footer {
 
     #countdown {
         font-size: 1.5rem;
+        padding: 12px 20px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 
     .container {
@@ -439,54 +1041,72 @@ footer {
     }
 
     section h2 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         margin-bottom: 40px;
     }
 
     #our-story .content {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
+    }
+    
+    #our-story img {
+        max-width: 320px;
+    }
+    
+    .itinerary-rows::before {
+        left: 20px;
+        transform: none;
+    }
+    
+    .itinerary-day {
+        max-width: 100%;
+        margin-left: 30px !important;
+        margin-right: 0 !important;
+    }
+    
+    .itinerary-day::before {
+        left: -37px !important;
+        right: auto !important;
     }
 
     .accommodation-category {
-        flex-basis: calc(50% - 10px);
+        flex-basis: 100%;
     }
 
     .itinerary-day ul li {
-        padding-left: 20px;
+        padding-left: 25px;
     }
 
     .itinerary-day ul li .time {
-        min-width: 70px;
+        min-width: 90px;
+        font-size: 0.9rem;
+    }
+    
+    .sub-section {
+        padding: 30px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    nav .logo {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 8px 0;
-        text-align: center;
-    }
-
     #home {
         padding-top: 120px;
     }
 
     #home h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
     }
 
     #home p.hero-location {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    
+    #home p.hero-location::before,
+    #home p.hero-location::after {
+        display: none;
     }
 
     #home p.hero-date {
@@ -494,15 +1114,30 @@ footer {
     }
 
     #countdown {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
     }
 
     section h2 {
         font-size: 2rem;
     }
-
-    .accommodation-category {
-        flex-basis: 100%;
+    
+    section h2::after {
+        width: 60px;
+    }
+    
+    .itinerary-day {
+        padding: 25px 20px;
+    }
+    
+    .itinerary-day h3 {
+        font-size: 1.6rem;
     }
 
     .itinerary-day ul li {
@@ -516,5 +1151,20 @@ footer {
 
     .itinerary-day ul li .time {
         margin-bottom: 5px;
+        min-width: auto;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .sub-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    #rsvp h2 {
+        font-size: 2rem;
+    }
+    
+    #rsvp p {
+        font-size: 1.1rem;
     }
 }
