@@ -1682,6 +1682,15 @@ footer p {
     .accommodation-options {
         gap: 20px;
     }
+    
+    .important-notes {
+        padding: 15px 18px;
+    }
+    
+    .important-notes p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
 
     body {
         font-size: 0.95rem;
@@ -1823,6 +1832,25 @@ footer p {
     #home {
         padding-top: 100px;
     }
+    
+    .important-notes strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 1rem;
+    }
+    
+    .accommodation-category h4 {
+        font-size: 1.3rem;
+    }
+    
+    .accommodation-category ul li {
+        padding-left: 15px;
+        padding-bottom: 18px;
+    }
+    
+    .accommodation-category ul li::before {
+        font-size: 1rem;
+    }
 
     h1 {
         margin-top: 1rem;
@@ -1919,9 +1947,32 @@ footer p {
         width: 100%;
         text-align: left;
     }
+    
+    .rsvp-ticket {
+        padding: 0;
+        margin: 0 -5px;
+    }
+    
+    .ticket-header {
+        padding: 15px;
+    }
+    
+    .ticket-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .stamp {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 20px;
+    }
 
     .sub-section h3 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
+    }
+    
+    .sub-section {
+        padding: 25px 15px;
     }
 
     #rsvp h2 {
