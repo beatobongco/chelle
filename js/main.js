@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Mobile Navigation Toggle --- //
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBar = document.querySelector('nav'); // Renamed to avoid redeclaration
+    
+    if (mobileNavToggle && navMenu && navBar) {
+        mobileNavToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-open');
+            mobileNavToggle.classList.toggle('open');
+            navBar.classList.toggle('nav-open');
+        });
+        
+        // Close mobile menu when a nav link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-open');
+                mobileNavToggle.classList.remove('open');
+                navBar.classList.remove('nav-open');
+            });
+        });
+        
+        // Close when clicking outside the menu
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('nav-open') && 
+                !e.target.closest('#nav-menu') && 
+                !e.target.closest('.mobile-nav-toggle')) {
+                navMenu.classList.remove('nav-open');
+                mobileNavToggle.classList.remove('open');
+                navBar.classList.remove('nav-open');
+            }
+        });
+    }
     // --- Countdown Timer --- //
     const countdownElement = document.getElementById('countdown');
     const weddingDateTimeObject = new Date('November 29, 2025 00:00:00'); // Date object for calculations
@@ -72,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Smooth Scrolling --- //
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    // Add an additional offset for mobile devices
+    const isMobile = window.innerWidth <= 768;
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -98,15 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Sticky Navigation on Scroll --- //
-    const navElement = document.querySelector('nav');
-    if (navElement) {
+    // Use navBar variable that was defined earlier
+    if (navBar) {
         const scrollThreshold = 50; // Pixels to scroll before nav becomes sticky
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > scrollThreshold) {
-                navElement.classList.add('nav-scrolled');
+                navBar.classList.add('nav-scrolled');
             } else {
-                navElement.classList.remove('nav-scrolled');
+                navBar.classList.remove('nav-scrolled');
             }
         });
     }
