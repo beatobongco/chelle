@@ -1415,10 +1415,7 @@ section h2::after {
     z-index: 1;
 }
 
-.rsvp-ticket:hover {
-    transform: rotateX(0deg) rotateY(0deg) translateY(-10px);
-    box-shadow: 0 30px 70px rgba(108, 52, 131, 0.3), 0 0 0 1px rgba(255, 123, 84, 0.2);
-}
+/* Hover animation removed as requested */
 
 .ticket-header {
     background: var(--cliff-purple);
