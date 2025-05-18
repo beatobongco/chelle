@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const distance = weddingDateTimestamp - now.getTime();
 
         if (distance < 0) {
-            if (countdownElement) countdownElement.innerHTML = "The day is here!";
+            if (countdownElement) countdownElement.innerHTML = "<div class='countdown-complete'>The day is here!</div>";
             clearInterval(countdownInterval);
             return;
         }
@@ -39,7 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const seconds = Math.floor((remainingTimeAfterMonths % (1000 * 60)) / 1000);
 
         if (countdownElement) {
-            countdownElement.innerHTML = `${months}m ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            // Create vintage poster style countdown with separate elements for each unit
+            countdownElement.innerHTML = `
+                <div class="countdown-item months-item">
+                    <div class="countdown-number">${months}</div>
+                    <div class="countdown-label">Months</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${days}</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${hours}</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${minutes}</div>
+                    <div class="countdown-label">Mins</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${seconds}</div>
+                    <div class="countdown-label">Secs</div>
+                </div>
+            `;
         }
     }
 

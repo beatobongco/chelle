@@ -1,16 +1,26 @@
 :root {
     /* Ton Sai Beach poster-inspired color palette */
-    --sunset-orange: #FF7B54; /* Vibrant sunset orange */
-    --sunset-yellow: #FFB26B; /* Warm sunset yellow */
-    --cliff-purple: #6C3483; /* Deep purple cliffs */
-    --cliff-lavender: #9B59B6; /* Lighter purple cliff details */
-    --ocean-blue: #3498DB; /* Ocean blue */
-    --beach-sand: #F5EBD8; /* Warm sand color */
-    --palm-green: #27AE60; /* Palm tree green */
-    --text-dark: #2C3E50; /* Dark text color */
-    --text-light: #ECF0F1; /* Light text color */
-    --overlay-dark: rgba(44, 62, 80, 0.7); /* Dark overlay */
-    
+    --sunset-orange: #FF7B54;
+    /* Vibrant sunset orange */
+    --sunset-yellow: #FFB26B;
+    /* Warm sunset yellow */
+    --cliff-purple: #6C3483;
+    /* Deep purple cliffs */
+    --cliff-lavender: #9B59B6;
+    /* Lighter purple cliff details */
+    --ocean-blue: #3498DB;
+    /* Ocean blue */
+    --beach-sand: #F5EBD8;
+    /* Warm sand color */
+    --palm-green: #27AE60;
+    /* Palm tree green */
+    --text-dark: #2C3E50;
+    /* Dark text color */
+    --text-light: #ECF0F1;
+    /* Light text color */
+    --overlay-dark: rgba(44, 62, 80, 0.7);
+    /* Dark overlay */
+
     /* Fonts */
     --font-display: 'Bigilla', serif;
     --font-heading: 'Kiona', sans-serif;
@@ -76,16 +86,16 @@ body {
     font-size: 3rem;
     margin-bottom: 2rem;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: var(--text-light);
 }
 
 #password-gate form {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     padding: 3rem;
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 500px;
 }
@@ -95,7 +105,7 @@ body {
     margin-bottom: 20px;
     width: 100%;
     border: none;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     color: var(--text-light);
     font-size: 1.1rem;
@@ -105,12 +115,12 @@ body {
 }
 
 #password-gate input::placeholder {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #password-gate input:focus {
-    background: rgba(255,255,255,0.3);
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 #password-gate button {
@@ -124,21 +134,21 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
 }
 
 #password-gate button:hover {
     background: var(--sunset-orange);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 #password-error {
     color: #FFD2D2;
     margin-top: 15px;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -150,13 +160,18 @@ body {
 }
 
 /* Typography with vintage poster aesthetics */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin-bottom: 1em;
     font-family: var(--font-heading);
     letter-spacing: 1px;
 }
 
 h1 {
+    margin-top: 4rem;
+    margin-bottom: 12rem;
     font-size: 4.5rem;
     font-weight: normal;
     color: var(--text-light);
@@ -221,7 +236,7 @@ img {
     height: auto;
     display: block;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Utilities */
@@ -342,7 +357,7 @@ nav.nav-scrolled ul li a::after {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
     color: var(--text-light);
@@ -374,7 +389,7 @@ nav.nav-scrolled ul li a::after {
     opacity: 0.7;
 }
 
-#home > * {
+#home>* {
     position: relative;
     z-index: 3;
 }
@@ -421,7 +436,7 @@ nav.nav-scrolled ul li a::after {
 
 #home p.hero-date {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; /* Increased from 2rem for more breathing room */
     color: var(--text-light);
     font-family: var(--font-heading);
     letter-spacing: 2px;
@@ -442,20 +457,89 @@ nav.nav-scrolled ul li a::after {
 }
 
 #countdown {
-    font-size: 2.2rem;
-    font-weight: bold;
     margin-bottom: 2.5rem;
     color: var(--text-light);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     font-family: var(--font-heading);
+    position: relative;
+}
+
+#countdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    /* border: 2px solid var(--sunset-yellow); */
+    z-index: -1;
+    /* transform: rotate(-1deg); */
+}
+
+#countdown .countdown-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+#countdown .countdown-number {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--sunset-yellow);
+    text-shadow: 3px 3px 0 var(--cliff-purple);
+    font-family: var(--font-display);
     letter-spacing: 2px;
-    background: rgba(255, 123, 84, 0.2);
-    backdrop-filter: blur(5px);
-    padding: 15px 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    display: inline-block;
+}
+
+#countdown .countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+#countdown .countdown-item.months-item {
+    position: relative;
+}
+
+/* Special highlight for months - a subtle glow instead of the exclamation mark */
+#countdown .countdown-item.months-item .countdown-number {
+    position: relative;
+    z-index: 1;
+}
+
+#countdown .countdown-item.months-item .countdown-number::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    /* background: radial-gradient(circle, rgba(255, 178, 107, 0.3) 0%, rgba(255, 178, 107, 0) 70%); */
+    border-radius: 50%;
+    z-index: -1;
+    /* animation: pulse 2s infinite; */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .btn {
@@ -634,15 +718,13 @@ section h2::after {
     bottom: 0;
     left: 50%;
     width: 4px;
-    background: repeating-linear-gradient(
-        45deg,
-        var(--sunset-orange),
-        var(--sunset-orange) 10px,
-        var(--sunset-yellow) 10px,
-        var(--sunset-yellow) 20px
-    );
+    background: repeating-linear-gradient(45deg,
+            var(--sunset-orange),
+            var(--sunset-orange) 10px,
+            var(--sunset-yellow) 10px,
+            var(--sunset-yellow) 20px);
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 0;
     border-radius: 4px;
 }
 
@@ -752,8 +834,8 @@ section h2::after {
 
 /* Travel & Accommodation Section - Vintage Style */
 #travel {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M25,50 C25,25 75,25 75,50 C75,75 25,75 25,50 Z" fill="none" stroke="%23FF7B5433" stroke-width="1"/></svg>'), 
-                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="none" stroke="%236C348333" stroke-width="1"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M25,50 C25,25 75,25 75,50 C75,75 25,75 25,50 Z" fill="none" stroke="%23FF7B5433" stroke-width="1"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="none" stroke="%236C348333" stroke-width="1"/></svg>');
     background-position: 0 0, 0 0;
     background-size: 100px 100px, 40px 40px;
 }
@@ -978,11 +1060,11 @@ footer p {
     .itinerary-day {
         max-width: 90%;
     }
-    
+
     #our-story .content {
         gap: 40px;
     }
-    
+
     .accommodation-category {
         flex-basis: calc(50% - 30px);
     }
@@ -992,7 +1074,7 @@ footer p {
     body {
         font-size: 0.95rem;
     }
-    
+
     nav {
         padding: 15px 0;
     }
@@ -1010,6 +1092,11 @@ footer p {
         gap: 20px;
     }
 
+    h1 {
+        margin-top: 3rem;
+        margin-bottom: 8rem; /* Reduced from 12rem for better mobile display */
+    }
+    
     #home h1 {
         font-size: 3.2rem;
     }
@@ -1026,7 +1113,7 @@ footer p {
         font-size: 1.5rem;
         padding: 12px 20px;
     }
-    
+
     .btn {
         padding: 12px 25px;
         font-size: 1rem;
@@ -1050,22 +1137,22 @@ footer p {
         text-align: center;
         gap: 30px;
     }
-    
+
     #our-story img {
         max-width: 320px;
     }
-    
+
     .itinerary-rows::before {
         left: 20px;
         transform: none;
     }
-    
+
     .itinerary-day {
         max-width: 100%;
         margin-left: 30px !important;
         margin-right: 0 !important;
     }
-    
+
     .itinerary-day::before {
         left: -37px !important;
         right: auto !important;
@@ -1083,7 +1170,7 @@ footer p {
         min-width: 90px;
         font-size: 0.9rem;
     }
-    
+
     .sub-section {
         padding: 30px 20px;
     }
@@ -1092,6 +1179,11 @@ footer p {
 @media (max-width: 480px) {
     #home {
         padding-top: 120px;
+    }
+    
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 6rem; /* Further reduced for very small screens */
     }
 
     #home h1 {
@@ -1103,7 +1195,7 @@ footer p {
         font-size: 1.3rem;
         letter-spacing: 2px;
     }
-    
+
     #home p.hero-location::before,
     #home p.hero-location::after {
         display: none;
@@ -1117,7 +1209,7 @@ footer p {
         font-size: 1.1rem;
         padding: 10px 15px;
     }
-    
+
     .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
@@ -1127,15 +1219,15 @@ footer p {
     section h2 {
         font-size: 2rem;
     }
-    
+
     section h2::after {
         width: 60px;
     }
-    
+
     .itinerary-day {
         padding: 25px 20px;
     }
-    
+
     .itinerary-day h3 {
         font-size: 1.6rem;
     }
@@ -1155,15 +1247,15 @@ footer p {
         width: 100%;
         text-align: left;
     }
-    
+
     .sub-section h3 {
         font-size: 1.8rem;
     }
-    
+
     #rsvp h2 {
         font-size: 2rem;
     }
-    
+
     #rsvp p {
         font-size: 1.1rem;
     }
