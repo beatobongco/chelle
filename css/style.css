@@ -1609,7 +1609,7 @@ footer {
     background: var(--cliff-purple);
     color: var(--text-light);
     text-align: center;
-    padding: 25px 0;
+    padding: 15px 0;
     font-family: var(--font-heading);
     border-top: 3px solid rgba(255, 123, 84, 0.5);
 }
@@ -1678,10 +1678,11 @@ footer p {
         flex-basis: 100%;
         padding: 25px 20px;
     }
-    
+
     .accommodation-options {
         gap: 20px;
     }
+
     body {
         font-size: 0.95rem;
     }
