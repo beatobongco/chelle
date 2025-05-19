@@ -1137,22 +1137,16 @@ section h2::after {
     margin-bottom: 30px;
     font-size: 2rem;
     font-family: var(--font-heading);
-    letter-spacing: 1px;
-    padding-bottom: 15px;
-    border-bottom: 2px dashed rgba(108, 52, 131, 0.2);
-}
-
-.itinerary-day ul {
-    list-style: none;
-    padding-left: 0;
 }
 
 .itinerary-day ul li {
-    margin-bottom: 20px;
-    padding-left: 35px;
-    position: relative;
+    list-style: none;
+    padding: 10px 0;
+    margin-left: 0;
+    border-bottom: 1px dashed rgba(108, 52, 131, 0.2);
     display: flex;
     align-items: flex-start;
+    position: relative;
     transition: all 0.3s ease;
 }
 
@@ -1161,14 +1155,7 @@ section h2::after {
 }
 
 .itinerary-day ul li::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--sunset-orange);
-    left: 10px;
-    top: 15px;
+    display: none;
 }
 
 .itinerary-day ul li .time {
@@ -1381,6 +1368,55 @@ section h2::after {
     left: 0;
     color: var(--sunset-orange);
     font-size: 1rem;
+}
+
+/* Itinerary legend and indicators */
+.itinerary-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.legend-icon {
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+.legend-icon.included {
+    color: var(--ocean-blue);
+}
+
+.legend-icon.not-included {
+    color: var(--sunset-orange);
+}
+
+/* Payment indicators */
+.payment-indicator {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.payment-indicator.hosted {
+    color: var(--ocean-blue);
+}
+
+.payment-indicator.self-pay {
+    color: var(--sunset-orange);
 }
 
 /* RSVP Section - Vintage Travel Ticket Style */
