@@ -1727,7 +1727,6 @@ footer p {
     }
 
     nav {
-        padding: 10px 0;
         background: transparent !important;
         /* Force transparent background on mobile */
     }
@@ -1745,6 +1744,10 @@ footer p {
     /* Only show when nav is open */
     nav.nav-open .container {
         display: block;
+    }
+
+    .nav-scrolled {
+        padding: 0 !important;
     }
 
     nav ul {
