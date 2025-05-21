@@ -2224,3 +2224,56 @@ footer p {
         padding: 0;
     }
 }
+
+/* Flight Options Styling */
+.flight-option {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--sunset-yellow);
+}
+
+.flight-option:last-of-type {
+    border-bottom: none;
+}
+
+.flight-option p strong {
+    color: var(--cliff-purple);
+    font-size: 1.1rem;
+}
+
+.monitor-links {
+    font-size: 0.95rem;
+    background: rgba(255, 245, 235, 0.7);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border-left: 3px solid var(--sunset-orange);
+}
+
+.monitor-links a {
+    color: var(--sunset-orange);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.monitor-links a:hover {
+    color: var(--cliff-purple);
+    text-decoration: underline;
+}
+
+.booking-tip {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--cliff-purple);
+}
+
+@media (max-width: 576px) {
+    .monitor-links {
+        display: block;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
