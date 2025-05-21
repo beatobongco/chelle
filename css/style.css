@@ -2088,3 +2088,46 @@ footer p {
 #accommodation i {
     font-weight: bold;
 }
+
+/* Travel Map Section Styling */
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 0;
+}
+
+.travel-map-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--sunset-orange);
+}
+
+.map-caption {
+    background: rgba(255, 245, 235, 0.8);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.map-caption p {
+    margin-bottom: 15px;
+}
+
+.map-caption p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .map-container {
+        padding: 20px 0;
+    }
+    
+    .travel-map-image {
+        max-width: 85%;
+    }
+}
