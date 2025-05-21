@@ -2122,6 +2122,16 @@ footer p {
     margin-bottom: 0;
 }
 
+.map-subheading {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--cliff-purple);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
 @media (min-width: 768px) {
     .map-container {
         padding: 20px 0;
