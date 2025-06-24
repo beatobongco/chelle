@@ -441,32 +441,86 @@
             font-size: 1.3rem;
         }
 
-        /* FAQ */
-        .faq-item {
+        /* FAQ Section Styles */
+        #faq {
             background: var(--warm-white);
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--colonial-stone);
-            overflow: hidden;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        #faq .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            max-width: 1200px;
+        }
+
+        #faq h2 {
+            display: none; /* Hide the main heading since we'll use vertical text */
+        }
+
+        .faq-vertical-title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 400;
+            letter-spacing: 8px;
+            color: var(--text-dark);
+            margin-right: 40px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .faq-content {
+            flex: 1;
+            max-width: 700px;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        .faq-item {
+            border: none;
+            background: transparent;
+            padding: 0;
         }
 
         .faq-question {
-            padding: 25px;
-            font-family: var(--font-accent);
+            font-family: var(--font-display);
+            font-size: 1.3rem;
             font-weight: 500;
             color: var(--text-dark);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         .faq-question:hover {
-            background: var(--cream);
+            color: var(--colonial-gold);
         }
 
         .faq-answer {
-            padding: 0 25px 25px;
-            color: var(--text-medium);
+            font-family: var(--font-body);
+            font-size: 1rem;
             line-height: 1.6;
+            color: var(--text-medium);
+            display: block;
+            margin-top: 8px;
+            padding-left: 0;
+            opacity: 0.9;
+        }
+
+        /* Remove the toggle functionality for a cleaner look */
+        .faq-answer {
+            display: block !important;
         }
 
         /* Contact */
@@ -748,55 +802,59 @@
     <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <div class="faq-vertical-title">BEATO & CHELLE</div>
+            <div class="faq-content">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 400; color: var(--text-dark); margin-bottom: 50px; letter-spacing: 2px;">FAQs</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">Can I bring a plus one?</div>
+                        <div class="faq-answer">Due to limited capacity, we are only able to accommodate the guests listed on
+                            your invitation. Thank you for understanding.</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Can I bring a plus one?</div>
-                <div class="faq-answer">Due to limited capacity, we are only able to accommodate the guests listed on
-                    your invitation. Thank you for understanding.</div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Are kids allowed?</div>
+                        <div class="faq-answer">Yes, children are welcome to join the celebration if they are part of the guest
+                            list. We can't wait to see them and hope they have a wonderful time.</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Are kids allowed?</div>
-                <div class="faq-answer">Yes, children are welcome to join the celebration if they are part of the guest
-                    list. We can't wait to see them and hope they have a wonderful time.</div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What time should I arrive?</div>
+                        <div class="faq-answer">The ceremony will begin at 2PM and the reception will start at 5PM. We suggest
+                            to please arrive on time.</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">What time should I arrive?</div>
-                <div class="faq-answer">The ceremony will begin at 2PM and the reception will start at 5PM. We suggest
-                    to please arrive on time.</div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Will there be transportation?</div>
+                        <div class="faq-answer">For our visiting guests, YES. There will be a dedicated van that will service
+                            all your transportation needs. From airport to hotel to the venues. More details will be shared
+                            closer to the date.</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Will there be transportation?</div>
-                <div class="faq-answer">For our visiting guests, YES. There will be a dedicated van that will service
-                    all your transportation needs. From airport to hotel to the venues. More details will be shared
-                    closer to the date.</div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What is the RSVP deadline?</div>
+                        <div class="faq-answer">Kindly RSVP by September 1, 2025. You can RSVP through our wedding website or by
+                            contacting us directly.</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">What is the RSVP deadline?</div>
-                <div class="faq-answer">Kindly RSVP by September 1, 2025. You can RSVP through our wedding website or by
-                    contacting us directly.</div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Where to stay?</div>
+                        <div class="faq-answer">We highly recommend staying in Citadines Hotel because of its proximity to the
+                            church. Other options: L'Fisher, Stone Hill, The Henry & Seda. You can also check nearby AirBnBs.
+                        </div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Where to stay?</div>
-                <div class="faq-answer">We highly recommend staying in Citadines Hotel because of its proximity to the
-                    church. Other options: L'Fisher, Stone Hill, The Henry & Seda. You can also check nearby AirBnBs.
-                </div>
-            </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What is the dress code?</div>
+                        <div class="faq-answer">For the ladies, a long dress or Filipiniana dress. For the gents, Barong Tagalog
+                            or a long sleeve polo. (No white, black and shades of pink)</div>
+                    </div>
 
-            <div class="faq-item">
-                <div class="faq-question">What is the dress code?</div>
-                <div class="faq-answer">For the ladies, a long dress or Filipiniana dress. For the gents, Barong Tagalog
-                    or a long sleeve polo. (No white, black and shades of pink)</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What dates should we book?</div>
-                <div class="faq-answer">We suggest to arrive on November 7 (Friday) and stay until November 9 (Sunday).
+                    <div class="faq-item">
+                        <div class="faq-question">What dates should we book?</div>
+                        <div class="faq-answer">We suggest to arrive on November 7 (Friday) and stay until November 9 (Sunday).
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -857,21 +915,8 @@
             });
         });
 
-        // FAQ Toggle Functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function () {
-                const answer = this.nextElementSibling;
-                const isVisible = answer.style.display === 'block';
-
-                // Close all other answers
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.style.display = 'none';
-                });
-
-                // Toggle current answer
-                answer.style.display = isVisible ? 'none' : 'block';
-            });
-        });
+        // FAQ Toggle Functionality - Removed for cleaner design
+        // All answers are now always visible
 
         // Navigation background on scroll
         window.addEventListener('scroll', function () {
