@@ -4,57 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chelle & Beato - Bacolod Family Wedding</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Join us for Chelle & Beato's family wedding celebration in Bacolod, Philippines on November 8, 2025. Ceremony at Sta. Clara Chapel, Reception at Balay Puti.">
-    <meta name="keywords"
-        content="wedding, family wedding, Bacolod, Philippines, destination wedding, Chelle and Beato, Filipino wedding">
-    <meta name="author" content="Chelle and Beato">
-
-    <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Chelle & Beato's Family Wedding in Bacolod">
-    <meta property="og:description"
-        content="Join us for our family wedding celebration in Bacolod, Philippines on November 8, 2025.">
-
-    <!-- Theme Color for Browser -->
-    <meta name="theme-color" content="#8FB299">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
-        rel="stylesheet">
-
+    <title>Beato & Chelle Wedding Invitation</title>
     <style>
-        :root {
-            /* Sophisticated Spanish Colonial Color Palette */
-            --sage-green: #8FB299;
-            --deep-sage: #7A9B8A;
-            --warm-beige: #E6D5BA;
-            /* Enhanced to match image */
-            --terracotta: #C8977F;
-            /* New Spanish colonial tone */
-            --cream: #F5F3F0;
-            --dusty-rose: #D4A5A5;
-            --warm-white: #FDFCFB;
-            --colonial-gold: #D5B87C;
-            /* Brightened to match image */
-            --colonial-stone: #D8CBBD;
-            /* New stone color from image */
-            --text-dark: #3A3A3A;
-            --text-medium: #5A5A5A;
-            --overlay-light: rgba(248, 246, 243, 0.95);
-
-            /* Elegant Typography */
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'Crimson Text', serif;
-            --font-accent: 'Lora', serif;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -62,872 +13,273 @@
         }
 
         body {
-            font-family: var(--font-body);
+            font-family: 'Georgia', serif;
+            background: #fefefe;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--warm-white);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--overlay-light);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 15px 0;
-            transition: all 0.3s ease;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-family: var(--font-accent);
-            font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--sage-green);
-        }
-
-        /* Hero Section */
-        #hero {
-            min-height: 100vh;
-            background: url('images/bacolod-cover.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 0;
-        }
-
-        #hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.15) 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 60px 40px;
-            margin: 0;
-            background-color: rgba(245, 243, 240, 0.85);
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 600px;
-            border: 1px solid var(--colonial-gold);
-            backdrop-filter: blur(5px);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            animation: bounce 2s infinite;
-            width: 40px;
-            height: 40px;
-            background-color: var(--warm-white);
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .scroll-indicator svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--colonial-gold);
-        }
-
-        @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateY(0) translateX(-50%);
-            }
-
-            40% {
-                transform: translateY(-20px) translateX(-50%);
-            }
-
-            60% {
-                transform: translateY(-10px) translateX(-50%);
-            }
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 400;
-            color: var(--text-dark);
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .hero-subtitle {
-            font-family: var(--font-accent);
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
-            color: var(--text-medium);
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .hero-date {
-            font-family: var(--font-display);
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            color: var(--colonial-gold);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .decorative-line {
-            width: 120px;
-            height: 2px;
-            background: var(--colonial-gold);
-            margin: 25px auto;
-            position: relative;
-        }
-
-        .decorative-line::before,
-        .decorative-line::after {
-            content: '';
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--colonial-gold);
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .decorative-line::before {
-            left: -4px;
-        }
-
-        .decorative-line::after {
-            right: -4px;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 80px 0;
-        }
-
-        section:nth-child(even) {
-            background: var(--cream);
-        }
-
-        h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3rem);
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--text-dark);
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: var(--sage-green);
-        }
-
-        /* Event Details */
-        .event-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .event-card {
-            background: var(--warm-white);
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border: 1px solid var(--colonial-gold);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .event-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--colonial-gold), var(--sage-green), var(--colonial-gold));
-        }
-
-        .event-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            color: var(--sage-green);
-            margin-bottom: 20px;
-        }
-
-        .event-card .time {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-
-        .event-card .venue {
-            font-size: 1.1rem;
-            color: var(--text-medium);
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .event-card .address {
-            font-size: 0.95rem;
-            color: var(--text-medium);
-            line-height: 1.4;
-        }
-
-        /* Dress Code */
-        .dress-code {
-            background: var(--warm-white);
-            color: var(--text-dark);
-            margin: 60px 0;
-            padding: 50px 30px;
-            text-align: center;
-            position: relative;
-            border: 1px solid var(--colonial-gold);
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .dress-code h3 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-
-        .dress-code p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* RSVP Section */
-        .rsvp-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .rsvp-deadline {
-            background: var(--colonial-stone);
-            color: var(--text-dark);
             padding: 20px;
+        }
+
+        .invitation-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px;
             border-radius: 8px;
-            margin: 30px 0;
-            font-size: 1.2rem;
-            font-weight: 500;
-            border-left: 4px solid var(--colonial-gold);
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--colonial-gold);
-            color: var(--text-dark);
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-family: var(--font-accent);
-            font-size: 1.1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-            border: 1px solid var(--colonial-gold);
-            box-shadow: 0 4px 12px rgba(213, 184, 124, 0.3);
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: var(--colonial-gold);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(213, 184, 124, 0.5);
-        }
-
-        /* Travel & Accommodation */
-        .accommodation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .hotel-card {
-            background: var(--warm-white);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--colonial-gold);
-            transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hotel-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--colonial-gold), var(--terracotta), var(--colonial-gold));
-            opacity: 0.8;
-            transform: scaleX(0.7);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .hotel-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .hotel-card:hover {
+        .invitation-image:hover {
             transform: translateY(-5px);
         }
 
-        .hotel-card h4 {
-            font-family: var(--font-display);
-            color: var(--sage-green);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        /* FAQ Section Styles */
-        #faq {
-            background: var(--warm-white);
-            padding: 80px 0;
-            position: relative;
-        }
-
-        #faq .container {
-            display: flex;
-            align-items: flex-start;
-            gap: 60px;
-            max-width: 1200px;
-        }
-
-        #faq h2 {
-            display: none; /* Hide the main heading since we'll use vertical text */
-        }
-
-        .faq-vertical-title {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 400;
-            letter-spacing: 8px;
-            color: var(--text-dark);
-            margin-right: 40px;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .faq-content {
-            flex: 1;
-            max-width: 700px;
-        }
-
-        .faq-grid {
-            display: grid;
-            gap: 40px;
-        }
-
-        .faq-item {
-            border: none;
-            background: transparent;
-            padding: 0;
-        }
-
-        .faq-question {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: var(--text-dark);
-            margin-bottom: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--colonial-gold);
-        }
-
-        .faq-answer {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-medium);
-            display: block;
-            margin-top: 8px;
-            padding-left: 0;
-            opacity: 0.9;
-        }
-
-        /* Remove the toggle functionality for a cleaner look */
-        .faq-answer {
-            display: block !important;
-        }
-
-        /* Contact */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .contact-card {
-            background: var(--warm-white);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid var(--colonial-gold);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 6px;
-            background: var(--colonial-gold);
-            border-radius: 0 0 8px 8px;
-        }
-
-        .contact-card h4 {
-            font-family: var(--font-display);
-            color: var(--sage-green);
-            margin-bottom: 15px;
-        }
-
-        /* No transition section CSS */
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            /* Adjust parallax for mobile performance */
-            #hero {
-                background-attachment: scroll;
-                background-position: center center;
-                min-height: 100vh;
-            }
-
-            .hero-content {
-                padding: 30px 20px;
-                width: 90%;
-                max-width: none;
-            }
-
-            .event-details {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-        }
-
-        /* For tablets */
-        @media (min-width: 769px) and (max-width: 1199px) {
-            #hero {
-                min-height: 100vh;
-            }
-        }
-
-        /* For wider screens */
-        @media (min-width: 1200px) {
-            #hero {
-                background-position: center center;
-                min-height: 100vh;
-            }
-        }
-
-        /* For very wide screens */
-        @media (min-width: 1600px) {
-            #hero {
-                background-position: center center;
-            }
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Decorative Elements */
-        .decorative-flourish {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--colonial-gold);
-            margin: 40px 0;
-            position: relative;
-        }
-
-        .decorative-flourish::before,
-        .decorative-flourish::after {
-            content: '—';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--colonial-gold);
-            opacity: 0.7;
-        }
-
-        .decorative-flourish::before {
-            left: calc(50% - 60px);
-        }
-
-        .decorative-flourish::after {
-            right: calc(50% - 60px);
-        }
-
-        .colonial-border {
-            border: 1px solid var(--colonial-gold);
-            border-radius: 8px;
-            position: relative;
-            padding: 40px 30px;
-            margin-top: 60px;
+        /* Special styling for the first image (main invitation) */
+        .hero-image {
             margin-bottom: 60px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
 
-        .colonial-border::before {
-            content: '';
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 60px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><path fill="none" stroke="%23D5B87C" stroke-width="1" d="M0,15 C15,5 35,25 50,15 C65,5 85,25 100,15" /></svg>');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 100% auto;
+        .rsvp-section {
+            text-align: center;
+            margin: 80px 0;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, #f8f6f3 0%, #faf8f5 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .rsvp-title {
+            font-size: 2.2rem;
+            color: #8b4d6b;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .rsvp-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            background: #8b4d6b;
+            color: white;
+            padding: 20px 50px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(139, 77, 107, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .rsvp-button:hover {
+            background: #6d3c54;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 77, 107, 0.4);
+        }
+
+        .rsvp-button:active {
+            transform: translateY(-1px);
+        }
+
+        .deadline-notice {
+            background: #fff9f5;
+            border-left: 4px solid #8b4d6b;
+            padding: 20px 25px;
+            margin: 40px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .deadline-notice strong {
+            color: #8b4d6b;
+        }
+
+        /* Placeholder styling - remove when using real images */
+        .placeholder {
+            background: #f5f5f5;
+            border: 2px dashed #ccc;
+            padding: 60px 20px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            border-radius: 8px;
+        }
+
+        .placeholder h3 {
+            margin-bottom: 10px;
+            color: #8b4d6b;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .invitation-image {
+                margin-bottom: 30px;
+                border-radius: 5px;
+            }
+
+            .hero-image {
+                margin-bottom: 40px;
+            }
+
+            .rsvp-section {
+                margin: 50px 0;
+                padding: 40px 20px;
+            }
+
+            .rsvp-title {
+                font-size: 1.8rem;
+            }
+
+            .rsvp-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .rsvp-button {
+                padding: 18px 40px;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+            }
+
+            .deadline-notice {
+                padding: 15px 20px;
+                margin: 30px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rsvp-button {
+                padding: 16px 35px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Smooth loading animation */
+        .invitation-image {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        .invitation-image:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .invitation-image:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .invitation-image:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .invitation-image:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .invitation-image:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#travel">Travel</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Chelle & Beato</h1>
-            <div class="decorative-line"></div>
-            <p class="hero-subtitle">invite you to celebrate their</p>
-            <p class="hero-subtitle">Family Wedding</p>
-            <div class="decorative-line"></div>
-            <p class="hero-date">November 8, 2025</p>
-            <p class="hero-subtitle">Bacolod, Philippines</p>
-        </div>
-        <div class="scroll-indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M7 10l5 5 5-5" />
-            </svg>
-        </div>
-    </section>
+        <!-- Main Invitation (Page 1) -->
+        <img src="b_images/1.jpg" alt="Beato and Chelle Wedding Invitation - November 8, 2025"
+            class="invitation-image hero-image">
 
-    <!-- No transition section -->
-
-    <!-- Event Details -->
-    <section id="details">
-        <div class="container">
-            <h2>Celebration Details</h2>
-
-            <div class="event-details">
-                <div class="event-card">
-                    <h3>Wedding Ceremony</h3>
-                    <div class="time">2:00 PM</div>
-                    <div class="venue">Sta. Clara Chapel</div>
-                    <div class="address">
-                        Bacolod City<br>
-                        Negros Occidental, Philippines
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <h3>Reception Dinner</h3>
-                    <div class="time">5:00 PM</div>
-                    <div class="venue">Balay Puti by Stephen's</div>
-                    <div class="address">
-                        Silay City<br>
-                        Negros Occidental, Philippines
-                    </div>
-                </div>
-            </div>
-
-            <div class="colonial-border dress-code">
-                <h3>Dress Code</h3>
-                <p><strong>Filipino Formal Attire</strong></p>
-                <p>Ladies: Filipiniana, Terno, or elegant formal dress</p>
-                <p>Gentlemen: Barong Tagalog or formal suit</p>
-                <p>Colors: Earth tones, pastels, or jewel tones preferred</p>
+        <!-- RSVP Section - Positioned after main invitation -->
+        <div class="rsvp-section">
+            <h2 class="rsvp-title">Please Join Us</h2>
+            <p class="rsvp-subtitle">We can't wait to celebrate with you!</p>
+            <a href="https://forms.gle/99P8K7f91D6FMvKd8" class="rsvp-button" target="_blank" rel="noopener">
+                RSVP Now
+            </a>
+            <div class="deadline-notice">
+                <strong>RSVP Deadline:</strong> September 1, 2025
             </div>
         </div>
-    </section>
 
-    <!-- Travel & Accommodation -->
-    <section id="travel">
-        <div class="container">
-            <h2>Travel & Accommodation</h2>
+        <!-- Guest Attire (Page 2) -->
+        <img src="b_images/2.jpg" alt="Wedding Guest Attire Guidelines" class="invitation-image">
 
-            <div class="accommodation-grid">
-                <div class="hotel-card">
-                    <h4>L'Fisher Hotel Bacolod</h4>
-                    <p>Luxury accommodation in the heart of Bacolod City. Close to ceremony venue.</p>
-                    <p><strong>Contact:</strong> +63 34 433 3731</p>
-                </div>
+        <!-- FAQs (Page 3) -->
+        <img src="b_images/3.jpg" alt="Wedding FAQs and Information" class="invitation-image">
 
-                <div class="hotel-card">
-                    <h4>Seda Capitol Central</h4>
-                    <p>Modern business hotel with excellent amenities and central location.</p>
-                    <p><strong>Contact:</strong> +63 34 462 8888</p>
-                </div>
+        <!-- Family & Entourage Dress Code (Page 4) -->
+        <img src="b_images/4.jpg" alt="Family and Entourage Dress Code" class="invitation-image">
 
-                <div class="hotel-card">
-                    <h4>OYO Hotels</h4>
-                    <p>Budget-friendly options throughout Bacolod with reliable service.</p>
-                    <p><strong>Website:</strong> oyorooms.com</p>
-                </div>
-            </div>
+        <!-- Principal Sponsors Dress Code (Page 5)-->
+        <img src="b_images/5.jpg" alt="Principal Sponsors Dress Code" class="invitation-image">
 
-            <div style="margin-top: 50px; text-align: center;">
-                <h3 style="font-family: var(--font-display); color: var(--sage-green); margin-bottom: 20px;">Getting
-                    There</h3>
-                <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
-                    Fly into Bacolod-Silay Airport (BCD). The airport is approximately 30 minutes from Bacolod City and
-                    15 minutes from Silay.
-                    Taxi and ride-sharing services are available.
-                </p>
-            </div>
+        <!-- Final RSVP Call-to-Action -->
+        <div class="rsvp-section">
+            <h2 class="rsvp-title">Looking Forward to Seeing You</h2>
+            <p class="rsvp-subtitle">Don't forget to RSVP!</p>
+            <a href="https://forms.gle/99P8K7f91D6FMvKd8" class="rsvp-button" target="_blank" rel="noopener">
+                RSVP Now
+            </a>
         </div>
-    </section>
 
-    <!-- RSVP Section -->
-    <section id="rsvp">
-        <div class="container">
-            <div class="rsvp-content">
-                <h2>RSVP</h2>
-                <div class="colonial-border">
-                    <div class="rsvp-deadline">
-                        Please respond by October 1, 2025
-                    </div>
-                    <p style="font-size: 1.1rem; margin-bottom: 30px;">
-                        Your presence would make our special day even more meaningful.
-                        Please let us know if you'll be joining us for this celebration of love and family.
-                    </p>
-                    <a href="#" class="btn">Confirm Your Attendance</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- FAQ Section -->
-    <section id="faq">
-        <div class="container">
-            <div class="faq-vertical-title">BEATO & CHELLE</div>
-            <div class="faq-content">
-                <h2 style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 400; color: var(--text-dark); margin-bottom: 50px; letter-spacing: 2px;">FAQs</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">Can I bring a plus one?</div>
-                        <div class="faq-answer">Due to limited capacity, we are only able to accommodate the guests listed on
-                            your invitation. Thank you for understanding.</div>
-                    </div>
+    <!-- 
+    =================================================================
+    INSTRUCTIONS FOR USE:
+    =================================================================
+    
+    1. CONVERT YOUR PDF TO IMAGES:
+       - Use PDF24.org, SmallPDF, or similar
+       - Export each page as PNG (recommended) or JPG
+       - Use HIGH QUALITY settings (300 DPI)
+       - Name them: page1.png, page2.png, page3.png, page4.png, page5.png
+    
+    2. REPLACE PLACEHOLDER LINKS:
+       - Find "YOUR_GOOGLE_FORMS_LINK_HERE" (appears twice)
+       - Replace with your actual Google Forms URL
+    
+    3. UPLOAD FILES:
+       - Put this HTML file and all image files in the same folder
+       - Upload to your web hosting service
+    
+    4. OPTIONAL CUSTOMIZATIONS:
+       - Change the rose color (#8b4d6b) if desired
+       - Adjust max-width in .container if needed
+       - Modify RSVP button text
+    
+    =================================================================
+    -->
 
-                    <div class="faq-item">
-                        <div class="faq-question">Are kids allowed?</div>
-                        <div class="faq-answer">Yes, children are welcome to join the celebration if they are part of the guest
-                            list. We can't wait to see them and hope they have a wonderful time.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">What time should I arrive?</div>
-                        <div class="faq-answer">The ceremony will begin at 2PM and the reception will start at 5PM. We suggest
-                            to please arrive on time.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">Will there be transportation?</div>
-                        <div class="faq-answer">For our visiting guests, YES. There will be a dedicated van that will service
-                            all your transportation needs. From airport to hotel to the venues. More details will be shared
-                            closer to the date.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">What is the RSVP deadline?</div>
-                        <div class="faq-answer">Kindly RSVP by September 1, 2025. You can RSVP through our wedding website or by
-                            contacting us directly.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">Where to stay?</div>
-                        <div class="faq-answer">We highly recommend staying in Citadines Hotel because of its proximity to the
-                            church. Other options: L'Fisher, Stone Hill, The Henry & Seda. You can also check nearby AirBnBs.
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">What is the dress code?</div>
-                        <div class="faq-answer">For the ladies, a long dress or Filipiniana dress. For the gents, Barong Tagalog
-                            or a long sleeve polo. (No white, black and shades of pink)</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">What dates should we book?</div>
-                        <div class="faq-answer">We suggest to arrive on November 7 (Friday) and stay until November 9 (Sunday).
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-
-            <div class="contact-info">
-                <div class="contact-card">
-                    <h4>For Wedding Details</h4>
-                    <p>Chelle & Beato</p>
-                    <p>Email: [WEDDING_EMAIL]</p>
-                    <p>Phone: [CONTACT_NUMBER]</p>
-                </div>
-
-                <div class="contact-card">
-                    <h4>For Travel Assistance</h4>
-                    <p>[FAMILY_CONTACT_NAME]</p>
-                    <p>Email: [TRAVEL_EMAIL]</p>
-                    <p>Phone: [TRAVEL_CONTACT]</p>
-                </div>
-
-                <div class="contact-card">
-                    <h4>Emergency Contact</h4>
-                    <p>[LOCAL_CONTACT_NAME]</p>
-                    <p>Phone: [EMERGENCY_NUMBER]</p>
-                    <p>Local Bacolod Contact</p>
-                </div>
-            </div>
-
-            <div class="decorative-flourish">❦</div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="font-style: italic; color: var(--text-medium); font-size: 1.1rem;">
-                    "Sa pag-ibig at pagkakaisa, kami ay nagsasama-sama"<br>
-                    <small style="font-size: 0.9rem;">(In love and unity, we come together)</small>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                const navHeight = document.querySelector('nav').offsetHeight;
-                const targetPosition = target.offsetTop - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // FAQ Toggle Functionality - Removed for cleaner design
-        // All answers are now always visible
-
-        // Navigation background on scroll
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(253, 252, 251, 0.98)';
-            } else {
-                nav.style.background = 'var(--overlay-light)';
-            }
-        });
-    </script>
 </body>
 
 </html>
