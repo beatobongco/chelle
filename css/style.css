@@ -1370,6 +1370,52 @@ section h2::after {
     font-size: 1rem;
 }
 
+/* Simple Accommodation Details Styling */
+.accommodation-details {
+    margin-top: 15px;
+    padding: 20px;
+    background: rgba(245, 235, 216, 0.3);
+    border-radius: 10px;
+    border-left: 3px solid var(--sunset-orange);
+}
+
+.accommodation-details p {
+    margin-bottom: 15px;
+}
+
+.accommodation-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.accommodation-details ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.accommodation-details ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--sunset-orange);
+    font-size: 0.9rem;
+}
+
+.accommodation-details a {
+    color: var(--sunset-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.accommodation-details a:hover {
+    color: var(--cliff-purple);
+    text-decoration: underline;
+}
+
 /* Itinerary legend and indicators */
 .itinerary-legend {
     display: flex;
