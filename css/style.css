@@ -2557,3 +2557,98 @@ footer p {
         padding: 8px 12px;
     }
 }
+
+/* Enhanced but balanced Bank Details styling */
+.bank-details h3 {
+    color: var(--sunset-orange);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.bank-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.bank-item {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 123, 84, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.bank-title {
+    color: var(--cliff-purple);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.account-line {
+    color: #5a4a3a;
+    margin: 4px 0;
+    font-weight: 500;
+}
+
+.account-copy-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 0 0;
+    background: rgba(255, 123, 84, 0.08);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 123, 84, 0.12);
+}
+
+.account-copy-line .account-number {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: var(--cliff-purple);
+    font-size: 1rem;
+    flex: 1;
+}
+
+.simple-copy-btn {
+    background: var(--sunset-orange);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.simple-copy-btn:hover {
+    background: var(--cliff-purple);
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.simple-copy-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .bank-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .account-copy-line {
+        gap: 8px;
+        padding: 6px 10px;
+    }
+    
+    .account-copy-line .account-number {
+        font-size: 0.95rem;
+    }
+    
+    .simple-copy-btn {
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+}

@@ -526,6 +526,28 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="bank-details">
+                                    <h3>If the QR code doesn't work</h3>
+                                    <div class="bank-list">
+                                        <div class="bank-item">
+                                            <div class="bank-title">GoTyme Savings</div>
+                                            <p class="account-line">Beato Jose Bongco</p>
+                                            <div class="account-copy-line">
+                                                <span class="account-number">019720922341</span>
+                                                <button class="simple-copy-btn" onclick="copyToClipboard('019720922341')" title="Copy account number">📋</button>
+                                            </div>
+                                        </div>
+                                        <div class="bank-item">
+                                            <div class="bank-title">BPI Savings</div>
+                                            <p class="account-line">Rochelle F. Suarez</p>
+                                            <div class="account-copy-line">
+                                                <span class="account-number">2339133238</span>
+                                                <button class="simple-copy-btn" onclick="copyToClipboard('2339133238')" title="Copy account number">📋</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="copy-note">Thank you so much for your love and generosity.</div>
+                                </div>
                             </div>
                         </div>
 
@@ -586,6 +608,26 @@
     </div>
 
     <!-- <script src="js/password.js"></script> -->
+    <script>
+        // Copy to clipboard functionality
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Show feedback
+                const copyBtns = document.querySelectorAll('.simple-copy-btn');
+                copyBtns.forEach(btn => {
+                    if (btn.onclick.toString().includes(text)) {
+                        const originalText = btn.textContent;
+                        btn.textContent = '✅';
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                        }, 2000);
+                    }
+                });
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
     <script src="js/main.js"></script>
 </body>
 

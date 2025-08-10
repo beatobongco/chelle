@@ -295,6 +295,316 @@
                 transform: translateY(0);
             }
         }
+
+        /* Gifts Section Styling */
+        .gifts-section {
+            margin: 80px 0;
+            padding: 0 20px;
+        }
+
+        .gifts-card {
+            background: linear-gradient(135deg, #f8f6f3 0%, #faf8f5 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(139, 77, 107, 0.15);
+            overflow: hidden;
+            border: 2px solid #e8e2d8;
+            position: relative;
+        }
+
+        .gifts-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b9d7a, #d4a574, #c49a8a);
+        }
+
+        .card-header {
+            text-align: center;
+            padding: 40px 30px 20px;
+            position: relative;
+            background: linear-gradient(135deg, rgba(139, 157, 122, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
+        }
+
+        .gifts-title {
+            font-size: 2.2rem;
+            color: #8b4d6b;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(139, 77, 107, 0.1);
+        }
+
+        .card-ornament {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+
+        .card-ornament.left {
+            left: 30px;
+        }
+
+        .card-ornament.right {
+            right: 30px;
+        }
+
+        .card-body {
+            padding: 30px 40px;
+        }
+
+        .gifts-content {
+            text-align: center;
+        }
+
+        .gifts-message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5a4a3a;
+            margin-bottom: 40px;
+            font-style: italic;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .qr-codes-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .qr-code-item {
+            text-align: center;
+        }
+
+        .qr-placeholder {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(139, 77, 107, 0.2);
+            border: 3px solid #e8e2d8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .qr-placeholder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(139, 77, 107, 0.3);
+        }
+
+        .qr-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            background: #ffffff;
+        }
+
+        /* Bank details (fallback) */
+        .bank-details {
+            margin-top: 30px;
+            background: #fffefb;
+            border: 1px solid #e8e2d8;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bank-details h3 {
+            text-align: center;
+            color: #8b4d6b;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .bank-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .bank-item {
+            background: #faf7f2;
+            border: 1px solid #e8e2d8;
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .bank-title {
+            color: #5a4a3a;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .account-line {
+            color: #5a4a3a;
+            margin: 2px 0;
+        }
+
+        .copy-note {
+            margin-top: 10px;
+            text-align: center;
+            color: #777;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .bank-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card-footer {
+            text-align: center;
+            padding: 25px 30px 35px;
+            background: linear-gradient(135deg, rgba(139, 157, 122, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+        }
+
+        .card-decoration {
+            font-size: 1.1rem;
+            color: #8b4d6b;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design for Gifts Section */
+        @media (max-width: 768px) {
+            .gifts-section {
+                margin: 60px 0;
+                padding: 0 15px;
+            }
+
+            .gifts-title {
+                font-size: 1.8rem;
+            }
+
+            .card-header {
+                padding: 30px 20px 15px;
+            }
+
+            .card-body {
+                padding: 25px 25px;
+            }
+
+            .gifts-message {
+                font-size: 1rem;
+            }
+
+            .qr-codes-container {
+                gap: 25px;
+            }
+
+            .qr-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+
+            .card-ornament {
+                font-size: 1.5rem;
+            }
+
+            .card-ornament.left {
+                left: 15px;
+            }
+
+            .card-ornament.right {
+                right: 15px;
+            }
+        }
+
+        /* Enhanced but balanced Bank Details styling */
+        .bank-details h3 {
+            color: #8b4d6b;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .bank-item {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(139, 77, 107, 0.15);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        .bank-title {
+            color: #8b4d6b;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .account-line {
+            color: #5a4a3a;
+            margin: 4px 0;
+            font-weight: 500;
+        }
+
+        .account-copy-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0 0 0;
+            background: rgba(139, 77, 107, 0.08);
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(139, 77, 107, 0.12);
+        }
+
+        .account-copy-line .account-number {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            color: #8b4d6b;
+            font-size: 1rem;
+            flex: 1;
+        }
+
+        .simple-copy-btn {
+            background: #8b4d6b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 8px;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .simple-copy-btn:hover {
+            background: #6d3c54;
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        .simple-copy-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .account-copy-line {
+                gap: 8px;
+                padding: 6px 10px;
+            }
+
+            .account-copy-line .account-number {
+                font-size: 0.95rem;
+            }
+
+            .simple-copy-btn {
+                padding: 4px 6px;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -357,6 +667,68 @@
             </div>
         </div>
 
+        <!-- Gifts Section -->
+        <div class="gifts-section">
+            <div class="gifts-card">
+                <div class="card-header">
+                    <div class="card-ornament left">🌸</div>
+                    <h2 class="gifts-title">Wedding Gifts</h2>
+                    <div class="card-ornament right">🌸</div>
+                </div>
+
+                <div class="card-body">
+                    <div class="gifts-content">
+                        <p class="gifts-message">Your presence at our special day is the greatest gift we could ask for.
+                            If you wish to honor us with a wedding gift, we would be grateful for a monetary
+                            contribution to help us begin our new journey together. Your love and blessings mean the
+                            world to us.</p>
+
+                        <div class="qr-codes-container">
+                            <div class="qr-code-item">
+                                <div class="qr-placeholder">
+                                    <img src="images/beato_qr.jpg" alt="Beato QR Code" class="qr-image">
+                                </div>
+                            </div>
+                            <div class="qr-code-item">
+                                <div class="qr-placeholder">
+                                    <img src="images/chelle_qr.jpg" alt="Chelle QR Code" class="qr-image">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bank-details">
+                            <h3>If the QR code doesn't work</h3>
+                            <div class="bank-list">
+                                <div class="bank-item">
+                                    <div class="bank-title">GoTyme Savings</div>
+                                    <p class="account-line">Beato Jose Bongco</p>
+                                    <div class="account-copy-line">
+                                        <span class="account-number">019720922341</span>
+                                        <button class="simple-copy-btn" onclick="copyToClipboard('019720922341')"
+                                            title="Copy account number">📋</button>
+                                    </div>
+                                </div>
+                                <div class="bank-item">
+                                    <div class="bank-title">BPI Savings</div>
+                                    <p class="account-line">Rochelle F. Suarez</p>
+                                    <div class="account-copy-line">
+                                        <span class="account-number">2339133238</span>
+                                        <button class="simple-copy-btn" onclick="copyToClipboard('2339133238')"
+                                            title="Copy account number">📋</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="copy-note">Thank you so much for your love and generosity.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div class="card-decoration">💝 Con Amor y Gratitud 💝</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Final RSVP Call-to-Action -->
         <div class="rsvp-section">
             <h2 class="rsvp-title">Looking Forward to Seeing You</h2>
@@ -369,6 +741,25 @@
     </div>
 
     <script>
+        // Copy to clipboard functionality
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                // Show feedback
+                const copyBtns = document.querySelectorAll('.simple-copy-btn');
+                copyBtns.forEach(btn => {
+                    if (btn.onclick.toString().includes(text)) {
+                        const originalText = btn.textContent;
+                        btn.textContent = '✅';
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                        }, 2000);
+                    }
+                });
+            }).catch(function (err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
         // Wedding countdown timer
         function updateCountdown() {
             // Wedding date: November 8, 2025 at 2:00 PM (Philippine Time)
