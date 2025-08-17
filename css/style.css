@@ -214,12 +214,14 @@ h3 {
     font-size: 2rem;
     color: var(--sunset-orange);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 h4 {
     font-size: 1.5rem;
     color: var(--cliff-purple);
     margin-bottom: 15px;
+    text-align: center;
 }
 
 p {
@@ -1205,6 +1207,8 @@ section h2::after {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .sub-section h3::after {
@@ -1319,6 +1323,7 @@ section h2::after {
     z-index: 1;
     padding-bottom: 8px;
     border-bottom: 2px dashed rgba(108, 52, 131, 0.2);
+    text-align: center;
 }
 
 .accommodation-category p {
@@ -2439,6 +2444,8 @@ footer p {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .venue-video-section h4::after {
@@ -2558,11 +2565,191 @@ footer p {
     }
 }
 
+/* Dress Code Section Styling */
+#dress-code {
+    background: linear-gradient(135deg, rgba(245, 235, 216, 0.6) 0%, rgba(255, 248, 225, 0.6) 100%);
+    position: relative;
+}
+
+#dress-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 123, 84, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(108, 52, 131, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.dress-code-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.dress-code-image-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.dress-code-image {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 4px solid var(--sunset-orange);
+    transform: rotate(-1deg);
+    transition: all 0.3s ease;
+}
+
+.dress-code-image:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dress-code-description {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--cliff-purple);
+}
+
+.dress-code-description h3 {
+    color: var(--cliff-purple);
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.dress-code-description>p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+.dress-code-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tip-section {
+    background: rgba(255, 245, 235, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 3px solid var(--sunset-orange);
+    transition: all 0.3s ease;
+}
+
+.tip-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-section h4 {
+    color: var(--cliff-purple);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.tip-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 0;
+}
+
+/* Responsive Design for Dress Code Section */
+@media (max-width: 968px) {
+    .dress-code-content {
+        gap: 40px;
+    }
+
+    .dress-code-image-container {
+        max-width: 600px;
+    }
+
+    .dress-code-tips {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dress-code-description {
+        padding: 30px 25px;
+    }
+
+    .dress-code-description h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .tip-section {
+        padding: 15px;
+    }
+
+    .tip-section h4 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dress-code-content {
+        gap: 30px;
+    }
+
+    .dress-code-description {
+        padding: 25px 20px;
+    }
+
+    .dress-code-description h3 {
+        font-size: 1.6rem;
+    }
+
+    .dress-code-description>p {
+        font-size: 1.1rem;
+    }
+
+    .tip-section {
+        padding: 12px 15px;
+    }
+
+    .tip-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .tip-section p {
+        font-size: 0.95rem;
+    }
+}
+
 /* Enhanced but balanced Bank Details styling */
 .bank-details h3 {
     color: var(--sunset-orange);
     font-weight: 600;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .bank-list {
@@ -2637,16 +2824,16 @@ footer p {
         grid-template-columns: 1fr;
         gap: 12px;
     }
-    
+
     .account-copy-line {
         gap: 8px;
         padding: 6px 10px;
     }
-    
+
     .account-copy-line .account-number {
         font-size: 0.95rem;
     }
-    
+
     .simple-copy-btn {
         padding: 4px 6px;
         font-size: 0.8rem;

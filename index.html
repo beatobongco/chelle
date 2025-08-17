@@ -65,6 +65,7 @@
                 <ul id="nav-menu">
                     <li><a href="#our-story">Our Story</a></li>
                     <li><a href="#itinerary">Itinerary</a></li>
+                    <li><a href="#dress-code">Dress Code</a></li>
                     <li><a href="#travel">Flights & Stays</a></li>
                     <li><a href="#gifts">Gifts</a></li>
                     <li><a href="#rsvp">RSVP</a></li>
@@ -247,6 +248,46 @@
             </div>
         </section>
 
+        <!-- Dress Code Section -->
+        <section id="dress-code">
+            <div class="container">
+                <h2>Dress Code</h2>
+                <div class="dress-code-content">
+                    <div class="dress-code-description">
+                        <h3>What to Wear at Tonsai Beach</h3>
+                        <p>Our tropical beach wedding calls for comfortable, breathable attire that matches the
+                            laid-back vibe of Ton Sai Beach. Think light fabrics, comfortable footwear, and don't forget
+                            sun protection!</p>
+
+                        <div class="dress-code-tips">
+                            <div class="tip-section">
+                                <h4>🌊 Beach Wedding Vibes</h4>
+                                <p>Light, flowy fabrics work best in the tropical heat and beach breeze. Linen, cotton,
+                                    satin, or lace are perfect choices.</p>
+                            </div>
+                            <div class="tip-section">
+                                <h4>👡 Footwear</h4>
+                                <p>Sandals, wedges, or barefoot are ideal for the beach setting. Avoid stiletto heels as
+                                    they'll sink into the sand!</p>
+                            </div>
+                            <div class="tip-section">
+                                <h4>☀️ Sun Protection</h4>
+                                <p>Don't forget sunglasses, hats, and sunscreen. The Thai sun can be intense, especially
+                                    during our afternoon ceremony.</p>
+                            </div>
+                            <div class="tip-section">
+                                <h4>🎨 Colors</h4>
+                                <p>Off-white, sand, stone gray. Please avoid any printed, black or bright colors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dress-code-image-container">
+                        <img src="images/tonsai-dress-code.jpg" alt="Tonsai dress code guide" class="dress-code-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Travel Section -->
         <section id="travel">
             <div class="beach-decorations"></div>
@@ -312,6 +353,7 @@
                                 to avoid transportation hassles.</p>
                         </div>
                     </div>
+
                 </div>
 
                 <div id="accommodation" class="sub-section"> <!-- This is the anchor for accommodation -->
@@ -534,7 +576,9 @@
                                             <p class="account-line">Beato Jose Bongco</p>
                                             <div class="account-copy-line">
                                                 <span class="account-number">019720922341</span>
-                                                <button class="simple-copy-btn" onclick="copyToClipboard('019720922341')" title="Copy account number">📋</button>
+                                                <button class="simple-copy-btn"
+                                                    onclick="copyToClipboard('019720922341')"
+                                                    title="Copy account number">📋</button>
                                             </div>
                                         </div>
                                         <div class="bank-item">
@@ -542,7 +586,8 @@
                                             <p class="account-line">Rochelle F. Suarez</p>
                                             <div class="account-copy-line">
                                                 <span class="account-number">2339133238</span>
-                                                <button class="simple-copy-btn" onclick="copyToClipboard('2339133238')" title="Copy account number">📋</button>
+                                                <button class="simple-copy-btn" onclick="copyToClipboard('2339133238')"
+                                                    title="Copy account number">📋</button>
                                             </div>
                                         </div>
                                     </div>
@@ -611,7 +656,7 @@
     <script>
         // Copy to clipboard functionality
         function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
+            navigator.clipboard.writeText(text).then(function () {
                 // Show feedback
                 const copyBtns = document.querySelectorAll('.simple-copy-btn');
                 copyBtns.forEach(btn => {
@@ -623,7 +668,7 @@
                         }, 2000);
                     }
                 });
-            }).catch(function(err) {
+            }).catch(function (err) {
                 console.error('Could not copy text: ', err);
             });
         }
